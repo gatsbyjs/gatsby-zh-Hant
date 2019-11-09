@@ -1,15 +1,15 @@
 
-# Gatsby Traditional Chinese Translation
+# Gatsby 繁體中文翻譯
 
-This repo contains the Traditional Chinese translation for Gatsby.
+本倉庫包含 Gatsby 的繁體中文翻譯
 
-Please refer to the [Translation Progress Issue](https://github.com/gatsbyjs/gatsby-zh-Hant/issues/1) to start translating!
+請參考 [Translation Progress Issue](https://github.com/gatsbyjs/gatsby-zh-Hant/issues/1) 開始翻譯！
 
-Useful Links:
+有用的連結:
 
 * [Style Guide](/style-guide.md)
 * [Gatsby Translation Guide](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
 * [Gatsby Discord](https://gatsby.dev/discord)
 
-(Feel free to translate this document and add any content you feel would be useful to contributors).
+(請隨意地翻譯本文件並新增任何你認為對貢獻者有用的內容)。
   
