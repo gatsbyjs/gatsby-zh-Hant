@@ -1,71 +1,71 @@
-# Style Guide
+# 風格指南
 
-Use this file for language-specific style rules to follow for translation.
+使用此文件以遵循特定語言的樣式規則進行翻譯。
 
-## Rules
+## 規則
 
-### Text in Code Blocks
+### 在代碼區塊中的文字
 
-Leave text in code blocks untranslated except for comments. You may optionally translate text in strings, but be careful not to translate strings that refer to code!
+在代碼區塊中的文字不應該予以翻譯，comments除外。翻譯字串是非強制的，但必須注意跟代碼之間的關係。
 
-Example:
+例子:
 
 ```js
-// Example
+// example
 import React from "react"
 export default () => (
   <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
 )
 ```
 
-✅ DO:
+✅ 可以這樣做：
 
 ```js
-// Ejemplo
+// 例
 import React from "react"
 export default () => (
   <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
 )
 ```
 
-✅ ALSO OKAY:
+✅ 也可以這樣做：
 
 ```js
-// Ejemplo
+// 例
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>你好！蓋茲比</div>
 )
 ```
 
-❌ DON'T:
+❌ 不可以這樣做：
 
 ```js
-// Ejemplo
+// 例
 import React from "react"
 export default () => (
   // 'purple' is a CSS keyword
-  <div style={{ color: `morado`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  <div style={{ color: `紫色`, fontSize: `72px` }}>你好！蓋茲比</div>
 )
 ```
 
-❌ DEFINITELY DON'T:
+❌ 絕對避免：
 
 ```js
-importar Reaccionar desde "reaccionar"
-exportar defecto () => (
-   <div estilo = {{color: `morado`, fontSize:` 72px`}}> ¡Hola Gatsby! </div>
+importar 反應 從 "反應"
+輸出 默認值  () => (
+   <div 風格 = {{color: `紫色`, fontSize:` 72px`}}>你好！蓋茲比</div>
 )
 ```
 
-### External Links
+### 外部連結
 
-If an external link is to an article in a reference like [MDN] or [Wikipedia], and a version of that article exists in your language that is of decent quality, consider linking to that version instead.
+如果有一個外部連結連到一篇[MDN] 或 [Wikipedia] 的文章，而該文章已經有相當不錯的繁體中文版，最好連結到該頁面。
 
-[mdn]: https://developer.mozilla.org/en-US/
-[wikipedia]: https://en.wikipedia.org/wiki/Main_Page
+[mdn]: https://developer.mozilla.org/zh-TW/
+[wikipedia]: https://zh.wikipedia.org/zh-tw/
 
-Example:
+例
 
 ```md
 React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
@@ -74,17 +74,17 @@ React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
 ✅ OK:
 
 ```md
-Los elementos de React son [inmutables](https://es.wikipedia.org/wiki/Objeto_inmutable).
+React元件為[不可變元件](https://zh.wikipedia.org/wiki/%E4%B8%8D%E5%8F%AF%E8%AE%8A%E7%89%A9%E4%BB%B6).
 ```
 
-For links that have no equivalent (Stack Overflow, YouTube videos, etc.), just use the English link.
+如果該連結並沒有中文版 (Stack Overflow, YouTube影片等等)，請直接使用英文版連結。
 
-## Glossary
+## 通用詞彙
 
-Use this section to list how common technical terminology should be translated.
+使用這個區塊來列出常見詞彙的正確翻譯
 
-| Term   | Translation |
+| 術語    | 翻譯 |
 | ------ | ----------- |
-| Plugin | ??          |
-| Theme  | ??          |
-| Query  | ??          |
+| Plugin | 插件         |
+| Theme  | 主題         |
+| Query  | 查詢         |
