@@ -1,22 +1,22 @@
 ---
-title: Gatsby.js Tutorials
+title: Gatsby.js 入門教學
 disableTableOfContents: true
 ---
 
-Welcome to Gatsby! We’re glad you’re here. The goal of this tutorial is to guide you through setting up and deploying your first Gatsby site using a starter template. As we walk through that process, we’ll introduce some more general web development topics, and go over the underlying structure of a Gatsby site.
+歡迎來到Gatsby! 我們很高興看到你在這裡。本教學的目標是帶領你使用入門模板來設置及部署你的第一個Gatsby網站。在過程中，我們將會介紹更多網站開發的主題以及介紹Gatsby網站的開發結構。
 
-> The full tutorial is intended to be as accessible as possible to people without much web development experience (yet!) — no need to be an expert. If you prefer to jump straight to code, feel free to skip the step-by-step tutorial and see the [quick start](/docs/quick-start/) page.
+> 整個教學主旨是要讓還沒有太多網站開發經驗的人理解、好上手－你不需要是個專家。如果你偏好直接動手做，請隨時跳過此教學，前往 [快速入門指南](/docs/quick-start/)。
 
-## Gatsby fundamentals
+## Gatsby基礎
 
-0.  [Set up your development environment](/tutorial/part-zero/): We'll introduce you to core technologies that power Gatsby, and guide you through setting up your development environment.
-1.  [Get to know Gatsby building blocks](/tutorial/part-one/): Starting new projects, developing, and deploying sites.
-1.  [Introduction to using CSS in Gatsby](/tutorial/part-two/): Explore libraries like Typography.js and CSS Modules.
-1.  [Building nested layouts in Gatsby](/tutorial/part-three/): Layouts are sections of your site that are reused across multiple pages like headers and footers.
+0.  [設置你的開發環境](/tutorial/part-zero/): 我們將介紹Gatsby的核心技術，並帶領你設置開發環境。
+1.  [了解Gatsby組件](/tutorial/part-one/): 開始新的項目，開發和部署網站。
+1.  [在Gatsby中使用CSS](/tutorial/part-two/): 探索像是Typography.js和CSS Modules的程式庫。
+1.  [在Gatsby中建立嵌套版面](/tutorial/part-three/): 版面是在你的網站中重複使用的區塊，像是頁首與頁尾。
 
-## Intermediate tutorials
+## 進階教學
 
-In these intermediate tutorials, you'll learn how to pull data from almost anywhere into your Gatsby site with GraphQL.
+在進階教學中，你會學到如何使用GraphQL匯出各種資料到你的Gatsby網站。
 
 4.  [Querying for data in a blog](/tutorial/part-four/): Create a blog and use a GraphQL query to pull your site title into the blog header.
 5.  [Source plugins and rendering queried data](/tutorial/part-five/): Use a source plugin to pull Markdown blog posts into your site and create an index page with a list of blog posts.
