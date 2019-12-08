@@ -7,8 +7,8 @@
 
 有用的連結:
 
-* [Style Guide](/style-guide.md)
-* [Gatsby Translation Guide](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
+* [風格指南](/style-guide.md)
+* [Gatsby 翻譯指南](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
 * [Gatsby Discord](https://gatsby.dev/discord)
 
 (請隨意地翻譯本文件並新增任何你認為對貢獻者有用的內容)。
