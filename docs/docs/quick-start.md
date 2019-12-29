@@ -25,7 +25,7 @@ npm install -g gatsby-cli
 gatsby new gatsby-site
 ```
 
-### 改變目錄進到網站資料夾
+### 變更目錄到網站資料夾
 
 ```shell
 cd gatsby-site
@@ -37,30 +37,30 @@ cd gatsby-site
 gatsby develop
 ```
 
-Gatsby will start a hot-reloading development environment accessible by default at `localhost:8000`.
+Gatsby會啟動一個即時重載的開發環境，預設位址於`localhost:8000`。
 
-Try editing the JavaScript pages in `src/pages`. Saved changes will live reload in the browser.
+試著在`src/pages`中編輯JavaScript頁面。保存的更動將即時重載到瀏覽器中。
 
-### Create a production build
+### 建立一個生產環境(production build)
 
 ```shell
 gatsby build
 ```
 
-Gatsby will perform an optimized production build for your site, generating static HTML and per-route JavaScript code bundles.
+Gatsby會為你的網站創立一個優化過的生產環境(production build)，產生靜態HTML和不同路徑的JavaScript代碼封包。
 
-### Serve the production build locally
+### 生產環境放上本機伺服器
 
 ```shell
 gatsby serve
 ```
 
-Gatsby starts a local HTML server for testing your built site. Remember to build your site using `gatsby build` before using this command.
+Gatsby啟動一個本機HTML伺服器來測試你的網站。在使用此指令之前記得使用`gatsby build`。
 
-### Access documentation for CLI commands
+### 查看CLI指令的文件
 
-To see detailed documentation for the CLI commands, run `gatsby --help` in the terminal.
+查看CLI指令的詳細文件，在終端機執行`gatsby --help`
 
-For specific commands, run `gatsby COMMAND_NAME --help` e.g. `gatsby new --help`.
+特定的指令，執行`gatsby COMMAND_NAME --help` 例如 `gatsby new --help`.
 
-For more information on the Gatsby CLI, visit the [CLI reference](/docs/gatsby-cli/) section of the docs.
+更多關於Gatsby CLI的資訊，請查看 [CLI reference](/docs/gatsby-cli/)區塊
