@@ -1,37 +1,37 @@
 ---
-title: Quick Start
+title: 快速入門
 ---
 
-This quick start is intended for intermediate to advanced developers. For a gentler intro to Gatsby, [head to our tutorial](/tutorial/)!
+此快速入門指南是給中級到高級的工程師，更溫和的Gatsby入門請看[入門教學](/tutorial/)!
 
-## Use the Gatsby CLI
+## 使用Gatsby CLI
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line"
   lessonTitle="Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line"
 />
 
-**Note**: this video uses `npx`, which is a tool to execute an npm package without first installing it. Running the command `npx gatsby new` is the same as running `gatsby new` after installing the gatsby-cli on your computer.
+**注意**: 此影片使用`npx`，是一個免安裝直接啟動npm package的工具。運行指令`npx gatsby new`和安裝gatsby-cli在本機後並執行`gatsby new`是一樣的。
 
-### Install the Gatsby CLI
+### 安裝Gatsby CLI
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-### Create a new site
+### 建立一個新網站
 
 ```shell
 gatsby new gatsby-site
 ```
 
-### Change directories into site folder
+### 改變目錄進到網站資料夾
 
 ```shell
 cd gatsby-site
 ```
 
-### Start development server
+### 啟動開發伺服器
 
 ```shell
 gatsby develop
