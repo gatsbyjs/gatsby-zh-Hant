@@ -34,8 +34,6 @@ Gatsby主題將所有預設配置（共享功能，數據來源，設計）集�
 
 ## 附加教學
 
-Go deeper with [additional Gatsby tutorials](/tutorial/additional-tutorials/).
-
 Gatsby有很多使用範例，第一段教學並未涵蓋其中的一些使用範例，以便您在學習時保持專注。Gatsby附加教學是許多資源的組合，顯示如何逐步完成更多的Gatsby的課題，例如將source plugins用於圖像和CMS內容。
 
 了解更多請看 [Gatsby附加教學](/tutorial/additional-tutorials/).
