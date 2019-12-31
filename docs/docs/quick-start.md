@@ -63,4 +63,4 @@ Gatsby啟動一個本機HTML伺服器來測試你的網站。在使用此指令�
 
 特定的指令，執行`gatsby COMMAND_NAME --help` 例如 `gatsby new --help`.
 
-更多關於Gatsby CLI的資訊，請查看 [CLI reference](/docs/gatsby-cli/)區塊
+更多關於Gatsby CLI的資訊，請查看 [CLI reference](/docs/gatsby-cli/)區塊。
