@@ -4,7 +4,7 @@ title: 快速入門
 
 此快速入門指南是給中級到高級的工程師，更溫和的 Gatsby 入門請看[入門教學](/tutorial/)!
 
-## 使用Gatsby CLI
+## 使用 Gatsby CLI
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line"
@@ -13,7 +13,7 @@ title: 快速入門
 
 **注意**: 此影片使用 `npx`，是一個免安裝直接啟動 npm package 的工具。運行指令 `npx gatsby new` 和安裝 gatsby-cli 在本機後並執行 `gatsby new` 是一樣的。
 
-### 安裝Gatsby CLI
+### 安裝 Gatsby CLI
 
 ```shell
 npm install -g gatsby-cli
