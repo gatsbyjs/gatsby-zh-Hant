@@ -152,7 +152,7 @@ Gatsby 可以直接使用 CSS Module。這個方法非常推薦初次用 Gatsby�
 
 1. 在 `src/components` 新增一個新的資料夾，然後在這個新資料夾，新增一個叫做 `container.js` 的檔案，並貼上下列內容：
 
-```javascript:title=src/components/container.js
+```jsx:title=src/components/container.js
 import React from "react"
 import containerStyles from "./container.module.css"
 
@@ -176,7 +176,7 @@ export default ({ children }) => (
 
 3. 新增 `src/pages/about-css-modules.js` 檔案以建立新的頁面 component：
 
-```javascript:title=src/pages/about-css-modules.js
+```jsx:title=src/pages/about-css-modules.js
 import React from "react"
 
 import Container from "../components/container"
@@ -247,7 +247,7 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-`console.log(styles)` 這行程式碼會記錄引用的結果，所以你可以看到已處理過的 `./about-css-modules.module.css` 檔案。如果開啟你瀏覽器中的主控台（使用像是 Firefox 或 Chrome 的開發人員工具），你會看到：
+`console.log(styles)` 這行程式碼會記錄引用的結果，所以你可以看到已處理過的 `./about-css-modules.module.css` 檔案。如果開啟你瀏覽器中的主控台（使用像是 Firefox 或 Chrome 的開發人員工具，通常是使用 F12 按鍵），你會看到：
 
 ![主控台中的 CSS module 引入結果](css-modules-console.png)
 
