@@ -18,6 +18,8 @@ title: 快速入門
 ```shell
 npm install -g gatsby-cli
 ```
+使用上面指令將 Gatsby CLI 全域安裝於你的系統
+
 
 ### 建立一個新網站
 
