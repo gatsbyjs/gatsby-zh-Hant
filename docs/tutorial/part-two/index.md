@@ -32,7 +32,7 @@ disableTableOfContents: true
 
 先從建立新的 Gatsby 網站開始。最好關閉你在[第一部分](/tutorial/part-one/)中使用的終端機視窗，再為了第二部分重開一個終端機視窗。（尤其如果你對命令行介面不熟悉的話）
 
-開啟新的終端機視窗，建立新的 "hello world" Gatsby 網站，然後啟動開發伺服器：
+開啟新的終端機視窗，建立新的 "hello world" Gatsby 網站在 `tutorial-part-two` 的目錄內，然後進入這個新目錄：
 
 ```shell
 gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
