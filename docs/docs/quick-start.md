@@ -1,68 +1,68 @@
 ---
-title: Quick Start
+title: 快速入門
 ---
 
-This quick start is intended for intermediate to advanced developers. For a gentler intro to Gatsby, [head to our tutorial](/tutorial/)!
+此快速入門指南是給中級到高級的工程師，更溫和的 Gatsby 入門請看[入門教學](/tutorial/)!
 
-## Use the Gatsby CLI
+## 使用 Gatsby CLI
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line"
-  lessonTitle="Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line"
+  lessonTitle="快速開始使用 Gatsby: 在命令列內建立、開發和建構 Gatsby 網站"
 />
 
-**Note**: this video uses `npx`, which is a tool to execute an npm package without first installing it. Running the command `npx gatsby new` is the same as running `gatsby new` after installing the gatsby-cli on your computer.
+**注意**: 此影片使用 `npx`，是一個免安裝直接啟動 npm package 的工具。運行指令 `npx gatsby new` 和安裝 gatsby-cli 在本機後並執行 `gatsby new` 是一樣的。
 
-### Install the Gatsby CLI
+### 安裝 Gatsby CLI
 
 ```shell
 npm install -g gatsby-cli
 ```
+使用上面指令將 Gatsby CLI 全域安裝於你的系統
 
-> The above command installs Gatsby CLI globally on your machine.
 
-### Create a new site
+### 建立一個新網站
 
 ```shell
 gatsby new gatsby-site
 ```
 
-### Change directories into site folder
+### 變更目錄到網站資料夾
 
 ```shell
 cd gatsby-site
 ```
 
-### Start development server
+### 啟動開發伺服器
 
 ```shell
 gatsby develop
 ```
 
-Gatsby will start a hot-reloading development environment accessible by default at `http://localhost:8000`.
+Gatsby 會啟動一個即時重載的開發環境，預設位址於 `localhost:8000`。
 
-Try editing the JavaScript pages in `src/pages`. Saved changes will live reload in the browser.
+試著在 `src/pages` 中編輯 JavaScript 頁面。保存的更動將即時重載到瀏覽器中。
 
-### Create a production build
+### 建立一個生產環境 (production build)
 
 ```shell
 gatsby build
 ```
 
-Gatsby will perform an optimized production build for your site, generating static HTML and per-route JavaScript code bundles.
+Gatsby 會為你的網站創立一個優化過的生產環境 (production build)，產生靜態 HTML 和不同路徑的 JavaScript 代碼封包。
 
-### Serve the production build locally
+### 生產環境放上本機伺服器
 
 ```shell
 gatsby serve
 ```
 
-Gatsby starts a local HTML server for testing your built site. Remember to build your site using `gatsby build` before using this command.
+Gatsby 啟動一個本機 HTML 伺服器來測試你的網站。在使用此指令之前記得使用 `gatsby build`。
 
-### Access documentation for CLI commands
+### 查看 CLI 指令的文件
 
-To see detailed documentation for the CLI commands, run `gatsby --help` in the terminal.
+查看 CLI 指令的詳細文件，在終端機執行 `gatsby --help`
 
-For specific commands, run `gatsby COMMAND_NAME --help` e.g. `gatsby new --help`.
+特定的指令，執行 `gatsby COMMAND_NAME --help` 例如 `gatsby new --help`.
 
-For more information on the Gatsby CLI, visit the [CLI reference](/docs/gatsby-cli/) section of the docs.
+更多關於 Gatsby CLI 的資訊，請查看 [CLI reference](/docs/gatsby-cli/)區塊。

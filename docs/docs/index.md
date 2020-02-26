@@ -1,5 +1,5 @@
 ---
-title: Gatsby.js Documentation
+title: Gatsby.js 技術文件
 description: The one stop location for tutorials, guides, and information about building with Gatsby
 disableTableOfContents: true
 ---
