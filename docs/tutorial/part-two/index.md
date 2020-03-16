@@ -1,5 +1,5 @@
 ---
-title: Introduction to Styling in Gatsby
+title: 在 Gatsby 中套用樣式
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -14,32 +14,32 @@ disableTableOfContents: true
 
 -->
 
-Welcome to part two of the Gatsby tutorial!
+歡迎來到 Gatsby 教學的第二部分！
 
-## What's in this tutorial?
+## 這篇教學裡有什麼？
 
-In this part, you're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+在這個部分，你會探索為 Gatsby 網站套用樣式的一些方法，並且更深入地使用 React component 建立網站。
 
-## Using global styles
+## 使用全域樣式
 
-Every site has some sort of global style. This includes things like the site's typography and background colors. These styles set the overall feel of the site — much like the color and texture of a wall sets the overall feel of a room.
+每個網站都有某些全域樣式，包含網站的文字排版與背景顏色。這些樣式決定了網站的整體氣氛──就好像牆壁的顏色與材質決定了一個房間的整體氣氛。
 
-### Creating global styles with standard CSS files
+### 用標準的 CSS 檔案建立全域樣式
 
-One of the most straightforward ways to add global styles to a site is using a global `.css` stylesheet.
+將全域樣式加入網站最直覺的方法之一就是使用全域的 `.css` 樣式表。
 
-#### ✋ Create a new Gatsby site
+#### ✋ 建立新的 Gatsby 網站
 
-Start by creating a new Gatsby site. It may be best (especially if you're new to the command line) to close the terminal windows you used for [part one](/tutorial/part-one/) and start a new terminal session for part two.
+先從建立新的 Gatsby 網站開始。最好關閉你在[第一部分](/tutorial/part-one/)中使用的終端機視窗，再為了第二部分重開一個終端機視窗。（尤其如果你對命令行介面不熟悉的話）
 
-Open a new terminal window, create a new "hello world" Gatsby site in a directory called `tutorial-part-two`, and then move to this new directory:
+開啟新的終端機視窗，建立新的 "hello world" Gatsby 網站在 `tutorial-part-two` 的目錄內，然後進入這個新目錄：
 
 ```shell
 gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-two
 ```
 
-You now have a new Gatsby site (based on the Gatsby "hello world" starter) with the following structure:
+你現在有了新的 Gatsby 網站（以 Gatsby "hello world" starter 為基礎），它的結構如下：
 
 ```text
 ├── package.json
@@ -48,9 +48,9 @@ You now have a new Gatsby site (based on the Gatsby "hello world" starter) with 
 │       └── index.js
 ```
 
-#### ✋ Add styles to a css file
+#### ✋ 加入樣式至 css 檔案中
 
-1. Create a `.css` file in your new project:
+1. 在你的新專案中新增一個 `.css` 檔案：
 
 ```shell
 cd src
@@ -59,9 +59,9 @@ cd styles
 touch global.css
 ```
 
-> Note: Feel free to create these directories and files using your code editor, if you'd prefer.
+> 注意：如果你比較偏好使用程式碼編輯器，也可以用你的程式碼編輯器新增這些資料夾跟檔案。
 
-You should now have a structure like this:
+你現在應該會有像這樣的結構：
 
 ```text
 ├── package.json
@@ -72,7 +72,7 @@ You should now have a structure like this:
 │       └── global.css
 ```
 
-2. Define some styles in the `global.css` file:
+2. 在 `global.css` 中定義一些樣式：
 
 ```css:title=src/styles/global.css
 html {
@@ -80,18 +80,18 @@ html {
 }
 ```
 
-> Note: The placement of the example css file in a `/src/styles/` folder is arbitrary.
+> 注意：範例的 css 檔案可以隨意的放在 `/src/styles/` 資料夾中的任何位置。
 
-#### ✋ Include the stylesheet in `gatsby-browser.js`
+#### ✋ 在 `gatsby-browser.js` 引入樣式表
 
-1. Create the `gatsby-browser.js`
+1. 新增 `gatsby-browser.js`
 
 ```shell
 cd ../..
 touch gatsby-browser.js
 ```
 
-Your project's file structure should now look like this:
+專案的檔案結構現在看起來會像這樣：
 
 ```text
 ├── package.json
@@ -103,54 +103,54 @@ Your project's file structure should now look like this:
 ├── gatsby-browser.js
 ```
 
-> 💡 What is `gatsby-browser.js`? Don't worry about this too much and for now, just know that `gatsby-browser.js` is one of a handful of special files that Gatsby looks for and uses (if they exist). Here, the naming of the file **is** important. If you do want to explore more now, check out [the docs](/docs/browser-apis/).
+> 💡 `gatsby-browser.js` 是什麼？先不要太擔心這個。現在只要知道 `gatsby-browser.js` 是 Gatsby 少數會尋找與使用的特殊檔案之一（如果它們存在）。在這裡，檔案的名字**很重要**。如果你現在想知道更多，請看[這份文件](/docs/browser-apis/)。
 
-2. Import your recently-created stylesheet in the `gatsby-browser.js` file:
+2. 引入剛剛新增的樣式表至 `gatsby-browser.js` 檔案：
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
 
-// or:
+// 或：
 // require('./src/styles/global.css')
 ```
 
-> Note: Both CommonJS (`require`) and ES Module (`import`) syntax work here. If you’re not sure which to choose, `import` is usually a good default. When working with files that are only run in a Node.js environment however (like `gatsby-node.js`), `require` will need to be used.
+> 注意：CommonJS（`require`）跟 ES 模組（`import`）的語法在這邊都可以用。如果你不確定要選哪一個，`import` 通常是不錯的預設選項。然而如果是只在 Node.js 環境執行的檔案（像是 `gatsby-node.js`），則必須使用 `require`。
 
-3. Start the development server:
+3. 啟動開發伺服器：
 
 ```shell
 gatsby develop
 ```
 
-If you take a look at your project in the browser, you should see a lavender background applied to the "hello world" starter:
+如果你在瀏覽器中檢視你的專案，應該會看到 "hello world" starter 套用了淡紫色的背景：
 
 ![Lavender Hello World!](global-css.png)
 
-> Tip: This part of the tutorial has focused on the quickest and most straightforward way to get started styling a Gatsby site — importing standard CSS files directly, using `gatsby-browser.js`. In most cases, the best way to add global styles is with a shared layout component. [Check out the docs](/docs/global-css/) for more on that approach.
+> 提示：這一部分的教學集中於以最快速、直覺的方法為 Gatsby 網站套用樣式──直接使用 `gatsby-browser.js` 引入標準的 CSS 檔案。在大多數情況中，加入全域樣式的最佳方法是用共享的 layout component。[參閱這份文件](/docs/global-css/)以取得關於這個方法的更多資訊。
 
-## Using component-scoped CSS
+## 使用 component-scoped CSS
 
-So far, we've talked about the more traditional approach of using standard css stylesheets. Now, we'll talk about various methods of modularizing CSS to tackle styling in a component-oriented way.
+目前為止，我們談了比較傳統的方法，也就是使用標準的 CSS 樣式表。現在我們將說明各種模組化 CSS 的方法，讓我們能以 component 導向的方式處理樣式。
 
-### CSS Modules
+### CSS Module
 
-Let's explore **CSS Modules**. Quoting from
-[the CSS Module homepage](https://github.com/css-modules/css-modules):
+讓我們研究 **CSS Module** 吧。引用自
+[CSS Module 官網](https://github.com/css-modules/css-modules)：
 
-> A **CSS Module** is a CSS file in which all class names and animation names
-> are scoped locally by default.
+> **CSS Module** 是一個 CSS 檔案，裡面所有類別與動畫的名字的作用範圍
+> 預設都只在模組內。
 
-CSS Modules are very popular because they let you write CSS normally but with a lot more safety. The tool automatically generates unique class and animation names, so you don't have to worry about selector name collisions.
+CSS Module 非常受歡迎，因為它讓你能夠像平常一樣的寫 CSS，卻又更安全。這個工具自動生成唯一的類別與動畫的名字，所以你不需要擔心選擇器名稱會重複。
 
-Gatsby works out of the box with CSS Modules. This approach is highly recommended for those new to building with Gatsby (and React in general).
+Gatsby 可以直接使用 CSS Module。這個方法非常推薦初次用 Gatsby（以及 React）開發的人使用。
 
-#### ✋ Build a new page using CSS Modules
+#### ✋ 用 CSS Module 建立新頁面
 
-In this section, you'll create a new page component and style that page component using a CSS Module.
+在這一節，你會建立新的頁面 component，並且用 CSS Module 在頁面套用樣式。
 
-First, create a new `Container` component.
+首先，建立新的 `Container` component。
 
-1. Create a new directory at `src/components` and then, in this new directory, create a file named `container.js` and paste the following:
+1. 在 `src/components` 新增一個新的資料夾，然後在這個新資料夾，新增一個叫做 `container.js` 的檔案，並貼上下列內容：
 
 ```jsx:title=src/components/container.js
 import React from "react"
@@ -161,9 +161,9 @@ export default ({ children }) => (
 )
 ```
 
-You'll notice you imported a css module file named `container.module.css`. Let's create that file now.
+你會注意到你引入了一個 css module 檔案叫做 `container.module.css`。現在讓我們來新增那個檔案。
 
-2. In the same directory (`src/components`), create a `container.module.css` file and copy/paste the following:
+2. 在同一個資料夾裡（`src/components`）新增 `container.module.css` 檔案，並且複製貼上下面的內容：
 
 ```css:title=src/components/container.module.css
 .container {
@@ -172,10 +172,9 @@ You'll notice you imported a css module file named `container.module.css`. Let's
 }
 ```
 
-You'll notice that the file name ends with `.module.css` instead of the usual `.css`. This is how you tell Gatsby that this CSS file should be processed as a CSS module rather than plain CSS.
+你會發現檔名以 `.module.css` 結尾，而不是平常的 `.css`。這告訴 Gatsby 這個 CSS 檔案應該當作 CSS module 處理，而不是純 CSS。
 
-3. Create a new page component by creating a file at
-   `src/pages/about-css-modules.js`:
+3. 新增 `src/pages/about-css-modules.js` 檔案以建立新的頁面 component：
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"
@@ -190,17 +189,17 @@ export default () => (
 )
 ```
 
-Now, if you visit `http://localhost:8000/about-css-modules/`, your page should look something like this:
+現在如果你瀏覽 `http://localhost:8000/about-css-modules/`，你的頁面看起來會像這樣：
 
-![Page with CSS module styles](css-modules-basic.png)
+![有 CSS module 樣式的頁面](css-modules-basic.png)
 
-#### ✋ Style a component using CSS Modules
+#### ✋ 使用 CSS Module 為 component 套用樣式
 
-In this section, you'll create a list of people with names, avatars, and short Latin biographies. You'll create a `<User />` component and style that component using a CSS module.
+在這一節，你會建立一個列表，裡面有人名、大頭貼以及一段簡短的拉丁文介紹。你會建立 `<User />` component 並使用 CSS module 為那個 component 套用樣式。
 
-1. Create the file for the CSS at `src/pages/about-css-modules.module.css`.
+1. 新增 `src/pages/about-css-modules.module.css` 檔案。
 
-2. Paste the following into the new file:
+2. 在新的檔案裡貼上下列內容：
 
 ```css:title=src/pages/about-css-modules.module.css
 .user {
@@ -236,7 +235,7 @@ In this section, you'll create a list of people with names, avatars, and short L
 }
 ```
 
-3. Import the new `src/pages/about-css-modules.module.css` file into the `about-css-modules.js` page you created earlier by editing the first few lines of the file like so:
+3. 編輯前面幾行，以引入新的 `src/pages/about-css-modules.module.css` 檔案至先前建立的 `about-css-modules.js` 頁面，像這樣：
 
 ```javascript:title=src/pages/about-css-modules.js
 import React from "react"
@@ -248,14 +247,13 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools, often by the F12 key) in your browser, you'll see:
+`console.log(styles)` 這行程式碼會記錄引用的結果，所以你可以看到已處理過的 `./about-css-modules.module.css` 檔案。如果開啟你瀏覽器中的主控台（使用像是 Firefox 或 Chrome 的開發人員工具，通常是使用 F12 按鍵），你會看到：
 
-![Import result of CSS module in console](css-modules-console.png)
+![主控台中的 CSS module 引入結果](css-modules-console.png)
 
-If you compare that to your CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. `avatar` points to `src-pages----about-css-modules-module---avatar---2lRF7`. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
+如果將那個跟你的 CSS 檔案比較，你會看到每一個類別現在都是已引入物件中的一個鍵，指向一個長字串，比如說 `avatar` 指向 `src-pages----about-css-modules-module---avatar---2lRF7`。這些是 CSS Module 產生的類別名字。這些名字在你的網站內都保證是唯一的。而且因為你必須引入它們來使用類別，你對某一段 CSS 程式碼在哪裡使用有疑問。
 
-4. Create a new `<User />` component inline in the `about-css-modules.js` page
-   component. Modify `about-css-modules.js` so it looks like the following:
+4. 在 `about-css-modules.js` 頁面 component 裡面建立新的 `<User />` component。修改 `about-css-modules.js` 讓它看起來像：
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"
@@ -296,27 +294,27 @@ export default () => (
 )
 ```
 
-> Tip: Generally, if you use a component in multiple places on a site, it should be in its own module file in the `components` directory. But, if it's used only in one file, create it inline.
+> 提示：一般而言，如果你在一個網站的多個地方使用一個 component，它應該在 `components` 資料夾有自己的模組檔案。但是如果只在一個地方用到，就在行內建立。
 
-The finished page should now look like:
+完成的頁面現在應該像：
 
-![User list page with CSS modules](css-modules-userlist.png)
+![使用 CSS module 的使用者列表頁面](css-modules-userlist.png)
 
 ### CSS-in-JS
 
-CSS-in-JS is a component-oriented styling approach. Most generally, it is a pattern where [CSS is composed inline using JavaScript](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js).
+CSS-in-JS 是以 component 為導向的一種套用樣式的方法。最常見的情況中，它是一種模式，[使用 JavaScript 將 CSS 編排於行內](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js)。
 
-#### Using CSS-in-JS with Gatsby
+#### 在 Gatsby 使用 CSS-in-JS
 
-There are many different CSS-in-JS libraries and many of them have Gatsby plugins already. We won't cover an example of CSS-in-JS in this initial tutorial, but we encourage you to [explore](/docs/styling/) what the ecosystem has to offer. There are mini-tutorials for two libraries, in particular, [Emotion](/docs/emotion/) and [Styled Components](/docs/styled-components/).
+有很多不同的 CSS-in-JS 程式庫，其中很多都已經有 Gatsby 插件。我們在這個一開始的教學中不會涵蓋 CSS-in-JS 的範例，但是我們鼓勵你[探索](/docs/styling/)這個生態系可以提供的東西。有兩個程式庫的迷你教學，特別是 [Emotion](/docs/emotion/) 與 [Styled Components](/docs/styled-components/)。
 
-#### Suggested reading on CSS-in-JS
+#### CSS-in-JS 的建議閱讀
 
-If you're interested in further reading, check out [Christopher "vjeux" Chedeau's 2014 presentation that sparked this movement](https://speakerdeck.com/vjeux/react-css-in-js) as well as [Mark Dalgleish's more recent post "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+如果你有興趣進一步閱讀關於這方面的資料，請參閱 [Christopher "vjeux" Chedeau 在 2014 年引發這場運動的簡報](https://speakerdeck.com/vjeux/react-css-in-js)以及 [Mark Dalgleish 比較新的文章「統一的樣式語言」](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)。
 
-### Other CSS options
+### 其他 CSS 選擇
 
-Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, [please contribute one!](/contributing/how-to-contribute/))
+Gatsby 支援幾乎每一種可能的樣式套用選項（如果你最喜歡的選擇還沒有插件，[請幫它貢獻一個！](/contributing/how-to-contribute/)）
 
 - [Typography.js](/packages/gatsby-plugin-typography/)
 - [Sass](/packages/gatsby-plugin-sass/)
@@ -324,8 +322,8 @@ Gatsby supports almost every possible styling option (if there isn't a plugin ye
 - [Stylus](/packages/gatsby-plugin-stylus/)
 - [PostCSS](/packages/gatsby-plugin-postcss/)
 
-and more!
+還有更多！
 
-## What's coming next?
+## 接下來是什麼？
 
-Now continue on to [part three of the tutorial](/tutorial/part-three/), where you'll learn about Gatsby plugins and layout components.
+現在繼續進行[教學的第三部分](/tutorial/part-three/)，在那裡你將學到 Gatsby 插件與 layout component。
