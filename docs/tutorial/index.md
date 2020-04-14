@@ -24,21 +24,11 @@ disableTableOfContents: true
 7.  [用系統化的方式從資料建立頁面](/tutorial/part-seven/): 學習如何系統化的為你的部落格文章建立一系列的頁面。
 8.  [準備網站上線](/tutorial/part-eight/): 學習如何審查網站的效能，優化效能、可訪問性、SEO 等等。
 
-<<<<<<< HEAD
-## 主題教學
+## 插件和主題教學
 
-Gatsby 主題將所有預設配置（共享功能，數據來源，設計）集中到一個可安裝的封包中。
+Gatsby 插件是一種封裝、重用及組合功能的方式，例如數據來源。Gatsby 主題是一種插件，將所有預設配置（共享功能，數據來源，設計）集中到一個可安裝的封包中。
 
-這意味著配置和功能不是直接寫到您的項目中，而是版本化，集中管理，然後以一個依賴方式安裝。您可以輕易更新主題，將數個主題組合在一起，甚至可以替換兼容的主題。
-
-學習更多使用跟建立主題，請看[Gatsby 主題教學](/tutorial/theme-tutorials/)。
-=======
-## Plugin & Theme tutorials
-
-Gatsby plugins are a way to encapsulate, re-use, and compose functionality, such as data sourcing. Gatsby themes are a type of plugin which abstracts your default configuration (shared functionality, data sourcing, design) out of your site and into an installable package.
-
-Learn how to build and use plugins and themes step-by-step in the [Plugin and Theme Tutorials](/tutorial/plugin-and-theme-tutorials/).
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+學習如何一步步建立跟使用插件和主題，請看[Gatsby 插件和主題教學](/tutorial/plugin-and-theme-tutorials/)。
 
 ## 附加教學
 
