@@ -48,7 +48,7 @@ cd tutorial-part-two
 │       └── index.js
 ```
 
-#### ✋ 加入樣式至 css 檔案中
+#### ✋ 加入樣式至 CSS 檔案中
 
 1. 在你的新專案中新增一個 `.css` 檔案：
 
@@ -80,7 +80,7 @@ html {
 }
 ```
 
-> 注意：範例的 css 檔案可以隨意的放在 `/src/styles/` 資料夾中的任何位置。
+> 注意：範例的 CSS 檔案可以隨意的放在 `/src/styles/` 資料夾中的任何位置。
 
 #### ✋ 在 `gatsby-browser.js` 引入樣式表
 
@@ -161,7 +161,7 @@ export default ({ children }) => (
 )
 ```
 
-你會注意到你引入了一個 css module 檔案叫做 `container.module.css`。現在讓我們來新增那個檔案。
+你會注意到你引入了一個 CSS module 檔案叫做 `container.module.css`。現在讓我們來新增那個檔案。
 
 2. 在同一個資料夾裡（`src/components`）新增 `container.module.css` 檔案，並且複製貼上下面的內容：
 
